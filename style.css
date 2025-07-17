@@ -1,21 +1,27 @@
 body {
-  max-width: 1300px;
-  margin: 0 auto;
-  padding: 20px;
-  font-family: 'Arial', sans-serif;
-  background-color: #fefefe;
+  background: #fafafa;
+  font-family: Georgia, serif;
+  margin: 0;
+  padding: 2em;
+  color: #222;
 }
 
-.gallery {
+h1 {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 1em;
+}
+
+.grid {
   display: grid;
-  grid-template-columns: repeat(3, 400px);
-  gap: 3px;
-  justify-content: center;
+  grid-template-columns: repeat(3, 300px); /* 3 kolom, masing-masing 300px */
+  justify-content: center; /* supaya di tengah */
+  gap: 3px; /* jarak antar gambar */
 }
 
-.gallery img {
-  width: 400px;
-  height: 400px;
+.grid img {
+  width: 300px;
+  height: 300px;
   object-fit: cover;
   display: block;
 }
