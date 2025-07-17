@@ -1,0 +1,21 @@
+body {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  background-color: #fefefe;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 400px);
+  gap: 3px;
+  justify-content: center;
+}
+
+.gallery img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  display: block;
+}
