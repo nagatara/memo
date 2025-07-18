@@ -37,7 +37,7 @@ nav a {
 
 .grid img {
   width: 100%;
-  aspect-ratio: 1 / 1;       /* atau bisa fixed 400px jika mau persegi */
+  aspect-ratio: 300px;       /* atau bisa fixed 400px jika mau persegi */
   object-fit: cover;  /* jika pakai fixed size */
   display: block;
 }
@@ -59,7 +59,6 @@ nav a {
 #popup img {
   max-width: 90vw;
   max-height: 90vh;
-  box-shadow: 0 0 10px #000;
 }
 
 /* === JURNAL === */
