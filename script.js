@@ -14,10 +14,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const img = document.createElement("img");
   img.style.cssText = `
-    max-width: 90%;
-    max-height: 90%;
-    box-shadow: 0 0 10px #fff;
-    border-radius: 10px;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    box-shadow: none;
+    border-radius: 0;
+    background: none;
+    border: none;
   `;
 
   modal.appendChild(img);
@@ -33,4 +36,20 @@ document.addEventListener("DOMContentLoaded", () => {
   modal.addEventListener("click", () => {
     modal.style.display = "none";
   });
+
+  // Navigasi menu aktif
+  document.getElementById("galeriLink").addEventListener("click", () => {
+    showGaleri();
+    setActive("galeriLink");
+  });
+
+  document.getElementById("jurnalLink").addEventListener("click", () => {
+    showJurnal();
+    setActive("jurnalLink");
+  });
+
+  function setActive(id) {
+    document.querySelectorAll("nav a").forEach(el => el.classList.remove("active"));
+    document.getElementById(id).classList.add("active");
+  }
 });
