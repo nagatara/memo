@@ -32,15 +32,13 @@ nav a {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3 kolom fleksibel */
   gap: 3px;
-  justify-items: center;
+  padding: 0;;
 }
 
 .grid img {
   width: 100%;
-  max-width: 300px;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  cursor: pointer;
+  aspect-ratio: 1 / 1;       /* atau bisa fixed 400px jika mau persegi */
+  object-fit: cover;  /* jika pakai fixed size */
   display: block;
 }
 
