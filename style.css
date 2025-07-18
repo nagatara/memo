@@ -11,44 +11,104 @@ h1 {
   font-size: 1.5em;
   line-height: 1.5em;
   margin-bottom: 1em;
+  white-space: pre-line;
 }
 
 nav {
   text-align: center;
-  margin-bottom: 1em;
+  margin-bottom: 2em;
 }
 
-nav button {
-  background: none;
-  border: 1px solid #aaa;
-  padding: 0.5em 1em;
-  margin: 0 0.5em;
-  cursor: pointer;
-  font-family: Georgia, serif;
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
 }
+
+/* === GALERI === */
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 300px); /* 3 kolom, masing-masing 300px */
-  justify-content: center; /* supaya di tengah */
-  gap: 3px; /* jarak antar gambar */
+  grid-template-columns: repeat(3, 1fr); /* 3 kolom fleksibel */
+  gap: 3px;
+  justify-items: center;
 }
 
 .grid img {
-  width: 300px;
-  height: 300px;
+  width: 100%;
+  max-width: 300px;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
+  cursor: pointer;
   display: block;
 }
 
-.jurnal-entry p {
-  font-size: 0.9em;
-  font-weight: normal;
-  line-height: 1.5em;
-  margin: 1em 0;
+/* Popup / Preview */
+
+#popup {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
 }
 
-.jurnal-entry hr {
+#popup img {
+  max-width: 90vw;
+  max-height: 90vh;
+  box-shadow: 0 0 10px #000;
+}
+
+/* === JURNAL === */
+
+.jurnal-entry {
+  border-bottom: 1px solid #ccc;
+  padding: 1em 0;
+  margin-bottom: 1em;
+}
+
+.jurnal-entry small {
+  display: block;
+  color: #666;
+  font-size: 0.8em;
+  text-align: right;
+  margin-bottom: 0.3em;
+}
+
+.jurnal-entry p {
+  font-size: 1em;
+  margin: 0;
+  white-space: pre-wrap; /* supaya baris baru terlihat */
+}
+
+form {
+  margin-bottom: 2em;
+}
+
+textarea {
+  width: 100%;
+  max-width: 600px;
+  height: 100px;
+  padding: 10px;
+  font-size: 1em;
+  font-family: Georgia, serif;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+button {
+  margin-top: 10px;
+  padding: 0.5em 1em;
+  font-size: 1em;
+  background: #333;
+  color: #fff;
   border: none;
-  border-top: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
 }
