@@ -11,14 +11,38 @@
     merasa yang sekarang, <br>
     menyambut yang akan datang
   </h1>
-  <div class="grid">
-    <img src="sample1.jpeg" alt="Foto 1">
-    <img src="sample2.jpg" alt="Foto 2">
-    <img src="sample3.JPG" alt="Foto 3">
-    <img src="sample4.JPG" alt="Foto 4">
-    <img src="sample5.JPG" alt="Foto 5">
-    <img src="sample6.JPG" alt="Foto 6">
+  <nav>
+    <button onclick="tampilkan('galeri')">Galeri</button>
+    <button onclick="tampilkan('jurnal')">Jurnal</button>
+  </nav>
+  <div id="memo">
+    <div id="galeri">
+      <div class="grid">
+        <img src="sample1.jpeg" alt="Foto 1">
+        <img src="sample2.jpg" alt="Foto 2">
+        <img src="sample3.JPG" alt="Foto 3">
+        <img src="sample4.JPG" alt="Foto 4">
+        <img src="sample5.JPG" alt="Foto 5">
+        <img src="sample6.JPG" alt="Foto 6">
+      </div>
+    </div>
+    
+    <div id="jurnal" style="display: none;">
+      <div class="jurnal-entry">
+        <p>Hari ini aku berjalan jauh, dan menemukan kembali sunyi yang menenangkan.</p>
+        <hr>
+        <p>Aku menyimpan ini sebagai pengingat, bahwa tidak semua rasa harus diramaikan.</p>
+        <hr>
+      </div>
+    </div>
   </div>
+
+  <script>
+    function tampilkan(bagian) {
+      document.getElementById("galeri").style.display = bagian === "galeri" ? "block" : "none";
+      document.getElementById("jurnal").style.display = bagian === "jurnal" ? "block" : "none";
+    }
+  </script>
 </body>
 </html>
 
