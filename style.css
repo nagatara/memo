@@ -14,15 +14,16 @@ h1 {
   white-space: pre-line;
 }
 
+/* === NAVIGASI HALAMAN === */
+
 nav {
   display: flex;
   justify-content: center;
-  gap: 40px; /* jarak antar link */
+  gap: 40px;
   margin-bottom: 1em;
   border-bottom: 1px solid #ccc;
   padding-bottom: 0.5em;
 }
-
 
 nav a {
   position: relative;
@@ -44,6 +45,8 @@ nav a.active::after {
   border-radius: 50%;
 }
 
+/* === GRID GALERI === */
+
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 300px);
@@ -57,48 +60,30 @@ nav a.active::after {
   width: 300px;
   height: 300px;
   object-fit: cover;
-  display: block;;
+  display: block;
+  cursor: pointer;
 }
 
-/* Popup / Preview */
+/* === PREVIEW / POPUP === */
 
-.modal {
+#img-modal {
   display: none;
   position: fixed;
   top: 0; left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0,0,0,0.8);
+  background: rgba(0,0,0,0.7);
   justify-content: center;
   align-items: center;
   z-index: 1000;
 }
 
-.modal-content {
-  max-width: 90vw;
-  max-height: 90vh;
+#img-modal img {
   width: 300px;
   height: 300px;
   object-fit: cover;
-
-  border: none !important;
-  box-shadow: none !important;
-  border-radius: 0 !important;
-  background: none !important;
-  outline: none !important;
-}
-#popup img {
-  max-width: 90vw;
-  max-height: 90vh;
-}
-
-.close {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  font-size: 2em;
-  color: white;
-  cursor: pointer;
+  box-shadow: none;
+  border-radius: 0;
   background: none;
   border: none;
 }
@@ -122,7 +107,7 @@ nav a.active::after {
 .jurnal-entry p {
   font-size: 1em;
   margin: 0;
-  white-space: pre-wrap; /* supaya baris baru terlihat */
+  white-space: pre-wrap;
 }
 
 form {
