@@ -15,26 +15,42 @@ h1 {
 }
 
 nav {
-  text-align: center;
-  margin-bottom: 2em;
+  display: flex;
+  justify-content: center;
+  gap: 40px; /* jarak antar link */
+  margin-bottom: 1em;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 0.5em;
 }
+
 
 nav a {
-  margin: 0 10px;
+  position: relative;
+  font-weight: normal;
   text-decoration: none;
   color: #333;
-  font-weight: bold;
+  font-size: 1em;
 }
 
-/* === GALERI === */
+nav a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 6px;
+  background-color: #333;
+  border-radius: 50%;
+}
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 300px); /* 3 kolom fleksibel */
+  grid-template-columns: repeat(3, 300px);
   gap: 5px;
-  justify-content: start; /* foto lebih ke kiri */
-  margin: 0 auto;
+  justify-content: center;
   padding: 0;
+  margin: 0 auto;
 }
 
 .grid img {
@@ -64,11 +80,13 @@ nav a {
   width: 300px;
   height: 300px;
   object-fit: cover;
-  border: none;
-  box-shadow: none;
-  border-radius: 0;
-}
 
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  background: none !important;
+  outline: none !important;
+}
 #popup img {
   max-width: 90vw;
   max-height: 90vh;
