@@ -6,30 +6,26 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>
-      Memandang ke belakang,<br>
-      merasa yang sekarang,<br>
-      menyambut yang akan datang
-    </h1>
-    <nav>
-      <a href="index.html">Galeri</a>
-      <a href="jurnal.html" class="active">Jurnal</a>
-    </nav>
-  </header>
+  <nav>
+    <a href="index.html">Galeri</a>
+    <a href="jurnal.html">Jurnal</a>
+  </nav>
 
-  <main>
-    <div class="jurnal-container">
-      <div class="entry">
-        <div class="meta">15 Juli 2025</div>
-        <p>Hari ini aku mulai belajar membuat situs galeri pribadi. Awalnya bingung, tapi akhirnya mulai paham.</p>
-      </div>
-      <hr>
-      <div class="entry">
-        <div class="meta">14 Juli 2025</div>
-        <p>Kemarin aku sempat kesal karena Instagram tidak lagi pakai grid 1:1 yang rapi. Makanya aku mulai bikin ini.</p>
-      </div>
-    </div>
-  </main>
+  <h1>Memandang ke belakang,<br>
+    merasa yang sekarang,<br>
+    menyambut yang akan datang
+  </h1>
+
+  <form id="jurnal-form">
+    <textarea id="jurnal-input" placeholder="Tulis jurnalmu di sini..."></textarea>
+    <br>
+    <button type="submit">Tambahkan Jurnal</button>
+  </form>
+
+  <div id="jurnal-container">
+    <!-- Entri jurnal akan muncul di sini -->
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
