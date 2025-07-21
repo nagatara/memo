@@ -52,17 +52,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// Navigasi galeri dan jurnal
-document.getElementById("galeriLink").addEventListener("click", () => {
-  showGaleri();
-  setActive("galeriLink");
-});
-
-document.getElementById("jurnalLink").addEventListener("click", () => {
-  showJurnal();
-  setActive("jurnalLink");
-});
-
 function setActive(id) {
   document.querySelectorAll("nav a").forEach(el => el.classList.remove("active"));
   document.getElementById(id).classList.add("active");
