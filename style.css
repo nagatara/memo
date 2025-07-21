@@ -21,7 +21,7 @@ nav {
   margin-bottom: 1.5em;
   margin-left: 0; /* Sejajar kiri */
   border-bottom: 1px solid #ccc; /* dipindah ke sini */
-  padding-bottom: 1.5em;
+  padding-bottom: 1em;
 }
 
 nav a {
@@ -39,9 +39,9 @@ nav a.active::after {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 0;
-  width: 6px;
-  height: 6px;
+  bottom: -7px;
+  width: 4px;
+  height: 4px;
   background-color: #333;
   border-radius: 50%;
 }
