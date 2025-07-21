@@ -1,1 +1,1 @@
-# https://nagatara.github.io/memo/index.html
+# https://nagatara.github.io/rekata/galeri.html
