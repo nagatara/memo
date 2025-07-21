@@ -13,21 +13,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const closeBtn = document.createElement("div");
   closeBtn.textContent = "×";
-  closeBtn.style.cssText = `
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    width: 20px;
-    height: 20px;
-    font-size: 16px;
-    background: #fff;
-    color: #000;
-    text-align: center;
-    line-height: 20px;
-    cursor: pointer;
-    border-radius: 2px;
-    z-index: 1001;
-  `;
+  closeBtn.className = "close"; // Tambahkan class agar cocok dengan CSS
+  modal.appendChild(closeBtn);
 
   const img = document.createElement("img");
   img.style.cssText = `
@@ -36,13 +23,12 @@ document.addEventListener("DOMContentLoaded", () => {
     display: block;
   `;
 
-  modal.appendChild(closeBtn);
   modal.appendChild(img);
   document.body.appendChild(modal);
 
   document.querySelectorAll(".grid img").forEach(image => {
     image.addEventListener("click", () => {
-      img.src = image.dataset.full;  // ambil gambar besar dari atribut data
+      img.src = image.dataset.full;
       modal.style.display = "flex";
     });
   });
@@ -51,8 +37,3 @@ document.addEventListener("DOMContentLoaded", () => {
     modal.style.display = "none";
   });
 });
-
-function setActive(id) {
-  document.querySelectorAll("nav a").forEach(el => el.classList.remove("active"));
-  document.getElementById(id).classList.add("active");
-}
