@@ -9,19 +9,19 @@ body {
 
 h1 {
   text-align: left;
-  font-size: 1.5em;
-  line-height: 1.8em;
-  margin-bottom: 0.25em;
+  font-size: 1.6em;
+  line-height: 0.6em;
+  margin-bottom: 0.5em;
   white-space: pre-line;
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 0.5em;
 }
 
 nav {
   text-align: left;
   margin-top: 0.5em;
-  margin-bottom: 2em;
+  margin-bottom: 1.5em;
   margin-left: 0; /* Sejajar kiri */
+  border-bottom: 1px solid #ccc; /* dipindah ke sini */
+  padding-bottom: 0.5em;
 }
 
 nav a {
@@ -30,6 +30,7 @@ nav a {
   color: #333;
   font-weight: normal; /* Tidak bold */
   position: relative;
+  padding-top: 3px;
   padding-bottom: 3px;
 }
 
